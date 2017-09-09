@@ -1,19 +1,28 @@
 import { Component } from '@angular/core';
+import { NavController, App } from 'ionic-angular';
+import { MePage } from '../me/me.component';
+import { ContactPage } from '../contact/contact.component';
+import { MessagePage } from '../message/message.component';
+import { SearchFriendPage } from './search-friend/search-friend.component';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  homeTab = HomePage;
-  aboutTab = AboutPage;
+  messageTab = MessagePage;
+  meTab =  MePage;
   contactTab = ContactPage;
 
-  constructor() {
+  constructor(
+    public appCtrl: App
+  ) {
+    
 
   }
+  goSearch() {
+    this.appCtrl.getRootNav().push(SearchFriendPage);
+  }
+
 }

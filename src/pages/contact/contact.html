@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>通讯录</ion-title>
-        <ion-buttons start>
+        <ion-buttons start (click)="goSearch()">
           <button ion-button icon-only>
             <ion-icon name='search'></ion-icon>
           </button>
@@ -17,11 +17,11 @@
 <ion-content>
   <ion-item-group>
     <ion-item>
-        <ion-icon name='person-add'  color="secondary" item-start></ion-icon>
+        <ion-icon name='person-add'  color="bright" item-start></ion-icon>
         新的朋友
     </ion-item>
     <ion-item>
-        <ion-icon name='contacts'  color="primary" item-start></ion-icon>
+        <ion-icon name='contacts'  color="secondary" item-start></ion-icon>
         群聊
     </ion-item>
   </ion-item-group>
